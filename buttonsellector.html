@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+html,body{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%; margin: 0; padding: 0;
+
+}
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  height: 15%
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+  height: 80%;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  height: 5%;
+}
+input[type=file], input[type=submit] {
+  background-color: Black; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="header">
+  <h2>video update</h2>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">left pb
+    <form method="post" action="uploadleft" enctype="multipart/form-data">
+      <input type="file" name="ufile" />
+      <input type="submit" />
+    </form>
+  </div>
+  <div class="column" style="background-color:#bbb;">right pb
+    <form method="post" action="uploadpbright" enctype="multipart/form-data">
+      <input type="file" name="ufile" />
+      <input type="submit" />
+    </form>
+  </div>
+  <div class="column" style="background-color:#ccc;">Column
+  <form method="post" action="launchvideo" enctype="multipart/form-data">
+    <!-- <input type="file" name="ufile" /> -->
+    <input type="submit" />
+  </form>
+</div>
+</div>
+
+<div class="footer">
+  <p>virtuoso</p>
+</div>
+
+</body>
+</html>

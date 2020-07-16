@@ -10,12 +10,12 @@ config = {
 }
 class HelloWorld(object):
     def __init__(self):
+        subprocess.Popen(['python /home/vr760/request.py'],shell=True)
         print("hihi")
     @cherrypy.expose
     def index(self):
         # <input type="button" value="goalA" onclick="location.href='192.168.3.3:8080/goalA_to'">
         # ERIC https://github.com/VirtuosoEric/robot_web_service/blob/pn60/home.html
-        subprocess.Popen(['python /home/vr760/request.py'],shell=True)
         f = open("buttonsellector.html", "r")
         return f
 
